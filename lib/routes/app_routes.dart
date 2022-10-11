@@ -3,22 +3,26 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   Routes._();
-  static const HOME = _Paths.HOME;
+  static const MAIN = _Paths.HOME;
   static const SPLASHSCREEN = _Paths.SPLASHSCREEN;
   static const SIGNIN = _Paths.SIGNIN;
   static const SIGNUP = _Paths.SIGNUP;
-  static const HISTORY = _Paths.HISTORY;
-  static const TRANSFER_CONFIRM = _Paths.TRANSFER_CONFIRM;
-  static const TRANSFER_SUCCES = _Paths.TRANSFER_SUCCES;
+  static const HOME = _Paths.HOME;
+  static const CHAT = _Paths.CHAT;
+  static const PROFILE = _Paths.PROFILE;
+  static const WISHLIST = _Paths.WISHLIST;
+  
 }
 
 abstract class _Paths {
   _Paths._();
-  static const HOME = '/home';
+  static const MAIN = '/main';
   static const SPLASHSCREEN = '/splash-screen';
   static const SIGNIN = '/sign-in';
   static const SIGNUP = '/sign-up';
-  static const HISTORY = '/history';
-  static const TRANSFER_CONFIRM = '/transfer-confirm';
-  static const TRANSFER_SUCCES = '/transfer-succes';
+  static const HOME = '/home';
+  static const CHAT = '/chat';
+  static const PROFILE = '/profile';
+  static const WISHLIST = '/wishlist';
+
 }

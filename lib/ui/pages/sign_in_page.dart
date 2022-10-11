@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shamo_app/shared/theme/theme.dart';
-import 'package:shamo_app/ui/pages/home_page.dart';
+import 'package:shamo_app/ui/pages/home/main_page.dart';
+import 'package:shamo_app/ui/pages/home/home_page.dart';
 import 'package:shamo_app/ui/pages/sign_up_page.dart';
 import 'package:shamo_app/ui/pages/widgets/custom_widget.dart';
 
@@ -69,7 +70,7 @@ class SigninPage extends StatelessWidget {
                     textColor: Colors.white,
                     onTap: () {
                       print('print');
-                      Get.offAll(HomePage());
+                      Get.offAll(MainPage());
                     }),
                 Spacer(),
                 Row(

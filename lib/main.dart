@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shamo_app/routes/app_pages.dart';
-import 'package:shamo_app/ui/pages/home_page.dart';
+import 'package:shamo_app/ui/pages/home/home_page.dart';
 import 'package:shamo_app/ui/pages/splash_screen.dart';
 
 void main() {
