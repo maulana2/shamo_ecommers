@@ -18,5 +18,9 @@ abstract class AppPages {
       name: Routes.SIGNIN,
       page: () => SigninPage(),
     ),
+    GetPage(
+      name: Routes.SIGNUP,
+      page: () => SigninPage(),
+    ),
   ];
 }

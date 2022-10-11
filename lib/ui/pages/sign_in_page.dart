@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:shamo_app/shared/theme/theme.dart';
-import 'package:shamo_app/ui/pages/widgets/textfield_widget.dart';
+import 'package:shamo_app/ui/pages/home_page.dart';
+import 'package:shamo_app/ui/pages/sign_up_page.dart';
+import 'package:shamo_app/ui/pages/widgets/custom_widget.dart';
 
 class SigninPage extends StatelessWidget {
   const SigninPage({super.key});
@@ -37,91 +40,67 @@ class SigninPage extends StatelessWidget {
       );
     }
 
-    Widget emailInput() {
-      return Container(
-        margin: EdgeInsets.symmetric(
-          horizontal: defaultMargin,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Email Adress',
-              style: primaryTextStyle.copyWith(
-                fontWeight: medium,
-                fontSize: 16,
-              ),
-            ),
-            Container(
-              width: double.infinity,
-              height: 50,
-              padding: EdgeInsets.symmetric(horizontal: 17, vertical: 19),
-              decoration: BoxDecoration(
-                color: bgColor2,
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Row(
-                children: [
-                  Image.asset('assets/images/email-icon.png'),
-                  SizedBox(
-                    width: 16,
-                  ),
-                  Expanded(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: 'Your Email Adress',
-                        hintStyle: secondaryTextStyle.copyWith(
-                          fontWeight: medium,
-                          fontSize: 14,
-                        ),
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      backgroundColor: bgColor,
+      body: CustomScrollView(
+        slivers: [
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                header(),
+                CustomWidgets.textField(
+                  isPassword: false,
+                  hintText: 'Your email adress',
+                  iconLeading: 'assets/images/email-icon.png',
+                  title: 'Email',
+                ),
+                CustomWidgets.textField(
+                  isPassword: true,
+                  hintText: 'Your password',
+                  iconLeading: 'assets/images/password.png',
+                  title: 'Password',
+                ),
+                CustomWidgets.button(
+                    buttonColor: primaryColor,
+                    title: 'Sign In',
+                    textColor: Colors.white,
+                    onTap: () {
+                      print('print');
+                      Get.offAll(HomePage());
+                    }),
+                Spacer(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Don\'t have an account?',
+                      style: primaryTextStyle.copyWith(
+                        color: blackText,
+                        fontSize: 12,
                       ),
                     ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      );
-    }
-
-    return Scaffold(
-      backgroundColor: bgColor,
-      body: ListView(
-        children: [
-          Column(
-            children: [
-              header(),
-              CustomWidgets.textField('Email Adress',
-                  isNumber: false, isPassword: false),
-              CustomWidgets.textField(
-                'Password',
-                isNumber: false,
-                isPassword: true,
-                length: 8,
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: defaultMargin),
-                height: 50,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: primaryColor,
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Sign In',
-                    style: secondaryTextStyle.copyWith(
-                      fontWeight: medium,
-                      fontSize: 16,
-                      color: primaryTextColor,
+                    TextButton(
+                      child: Text(
+                        'Sign Up',
+                        style: primaryTextStyle.copyWith(
+                          fontSize: 12,
+                          color: primaryColor,
+                        ),
+                      ),
+                      onPressed: () {
+                        Get.to(
+                          () => SignUpPage(),
+                        );
+                      },
                     ),
-                  ),
+                  ],
                 ),
-              ),
-            ],
-          ),
+              ],
+            ),
+          )
         ],
       ),
     );

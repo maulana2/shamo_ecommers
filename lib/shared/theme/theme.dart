@@ -11,6 +11,7 @@ Color bgColor2 = Color(0xff2B2937);
 Color bgColor3 = Color(0xff242231);
 Color primaryTextColor = Color(0xffF1F0F2);
 Color secondaryTextColor = Color(0xff999999);
+Color blackText = Color(0xff504F5E);
 
 double defaultMargin = 30.0;
 
