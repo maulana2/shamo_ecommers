@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
 import 'package:shamo_app/shared/theme/theme.dart';
 
 class CustomWidgets {

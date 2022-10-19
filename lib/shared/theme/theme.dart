@@ -3,18 +3,20 @@ import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
-Color primaryColor = Color(0xff6C5ECF);
-Color secondaryColor = Color(0xff38ABBE);
-Color alertColor = Color(0xffED6363);
-Color priceColor = Color(0xff2C96F1);
-Color bgColor = Color(0xff1F1D2B);
-Color bgColor2 = Color(0xff2B2937);
-Color bgColor3 = Color(0xff242231);
-Color bgColor4 = Color(0xff252836);
-Color primaryTextColor = Color(0xffF1F0F2);
-Color secondaryTextColor = Color(0xff999999);
-Color blackText = Color(0xff504F5E);
+Color primaryColor = const Color(0xff6C5ECF);
+Color secondaryColor = const Color(0xff38ABBE);
+Color alertColor = const Color(0xffED6363);
+Color priceColor = const Color(0xff2C96F1);
+Color bgColor = const Color(0xff1F1D2B);
+Color bgColor2 = const Color(0xff2B2937);
+Color bgColor3 = const Color(0xff242231);
+Color bgColor4 = const Color(0xff252836);
+Color primaryTextColor = const Color(0xffF1F0F2);
+Color secondaryTextColor = const Color(0xff999999);
+Color blackText = const Color(0xff504F5E);
 Color transparentColor = Colors.transparent;
+Color grey = const Color(0xff999999);
+Color blackTextColor = const Color(0xff999999);
 
 double defaultMargin = 30.0;
 
