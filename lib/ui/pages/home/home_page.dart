@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shamo_app/shared/theme/theme.dart';
+import 'package:shamo_app/ui/pages/widgets/product_tile.dart';
 
 class HomePages extends StatelessWidget {
   const HomePages({super.key});
@@ -277,6 +278,16 @@ class HomePages extends StatelessWidget {
       );
     }
 
+    Widget newArrivalsItems() {
+      return Container(
+        margin: EdgeInsets.only(top: 14),
+        child: ListView.builder(
+          shrinkWrap: true,
+          itemBuilder: (context, index) => ProductTile(),
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: bgColor,
       body: SafeArea(
@@ -287,6 +298,7 @@ class HomePages extends StatelessWidget {
             popularProductTitle(),
             popularProductItem(),
             newArrivalsTitle(),
+            newArrivalsItems(),
           ],
         ),
       ),
