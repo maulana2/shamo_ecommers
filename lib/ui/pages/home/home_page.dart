@@ -281,10 +281,13 @@ class HomePages extends StatelessWidget {
     Widget newArrivalsItems() {
       return Container(
         margin: EdgeInsets.only(top: 14),
-        child: ListView.builder(
-          shrinkWrap: true,
-          itemBuilder: (context, index) => ProductTile(),
-        ),
+          padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+          child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: 6,
+            physics: ScrollPhysics(),
+            itemBuilder: (context, index) => ProductTile(),
+          )
       );
     }
 

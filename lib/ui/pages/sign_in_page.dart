@@ -70,7 +70,11 @@ class SigninPage extends StatelessWidget {
                     textColor: Colors.white,
                     onTap: () {
                       print('print');
-                      Get.offAll(MainPage());
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MainPage(),
+                          ));
                     }),
                 Spacer(),
                 Row(
