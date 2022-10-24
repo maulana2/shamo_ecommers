@@ -69,6 +69,8 @@ class SignUpPage extends StatelessWidget {
                     hintText: 'Your passwoard',
                   ),
                   CustomWidgets.button(
+                    borderRadius: 12,
+                    width: double.infinity,
                     buttonColor: primaryColor,
                     title: 'Sign Up',
                     textColor: primaryTextColor,

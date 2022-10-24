@@ -65,6 +65,8 @@ class SigninPage extends StatelessWidget {
                   title: 'Password',
                 ),
                 CustomWidgets.button(
+                    borderRadius: 12,
+                    width: double.infinity,
                     buttonColor: primaryColor,
                     title: 'Sign In',
                     textColor: Colors.white,

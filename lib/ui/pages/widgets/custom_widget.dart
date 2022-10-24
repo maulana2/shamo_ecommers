@@ -79,17 +79,19 @@ class CustomWidgets {
       {required Color buttonColor,
       required String title,
       required Color textColor,
-      required VoidCallback onTap
+    required VoidCallback onTap,
+    required double width,
+    required double borderRadius,
       /* required Function onButtonPressed */
       }) {
     return Container(
       margin:
           EdgeInsets.only(top: 30, right: defaultMargin, left: defaultMargin),
       height: 50,
-      width: double.infinity,
+      width: width,
       decoration: BoxDecoration(
         color: primaryColor,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(borderRadius),
       ),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
