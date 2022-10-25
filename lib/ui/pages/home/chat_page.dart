@@ -49,7 +49,7 @@ class ChatPages extends StatelessWidget {
               'You have never done a transaction',
               style: primaryTextStyle.copyWith(
                 fontSize: 14,
-                color: grey,
+                color: secondaryTextColor,
               ),
             ),
             SizedBox(

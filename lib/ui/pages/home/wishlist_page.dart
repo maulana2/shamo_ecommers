@@ -39,7 +39,7 @@ class WishlistPages extends StatelessWidget {
               style: primaryTextStyle.copyWith(
                 fontSize: 16,
                 color: primaryTextColor,
-                fontWeight: medium,
+                fontWeight: medium, 
               ),
             ),
             SizedBox(
@@ -49,7 +49,7 @@ class WishlistPages extends StatelessWidget {
               'Let\'s find your favorite shoes',
               style: primaryTextStyle.copyWith(
                 fontSize: 14,
-                color: grey,
+                color: secondaryTextColor,
               ),
             ),
             SizedBox(

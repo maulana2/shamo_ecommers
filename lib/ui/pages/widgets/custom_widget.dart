@@ -75,15 +75,44 @@ class CustomWidgets {
     );
   }
 
-  static Widget button(
-      {required Color buttonColor,
-      required String title,
-      required Color textColor,
+  static Widget tileProfile(
+      {required String title, required VoidCallback onPressed}) {
+    return Container(
+      margin: EdgeInsets.only(
+        top: 20,
+      ),
+      child: MaterialButton(
+        onPressed: onPressed,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              title,
+              style: primaryTextStyle.copyWith(
+                fontSize: 13,
+                color: secondaryTextColor,
+              ),
+            ),
+            Icon(
+              Icons.arrow_forward_ios_rounded,
+              color: secondaryTextColor,
+              size: 12,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  static Widget button({
+    required Color buttonColor,
+    required String title,
+    required Color textColor,
     required VoidCallback onTap,
     required double width,
     required double borderRadius,
-      /* required Function onButtonPressed */
-      }) {
+    /* required Function onButtonPressed */
+  }) {
     return Container(
       margin:
           EdgeInsets.only(top: 30, right: defaultMargin, left: defaultMargin),

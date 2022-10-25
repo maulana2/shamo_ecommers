@@ -41,74 +41,76 @@ class SigninPage extends StatelessWidget {
       );
     }
 
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      backgroundColor: bgColor,
-      body: CustomScrollView(
-        slivers: [
-          SliverFillRemaining(
-            hasScrollBody: false,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                header(),
-                CustomWidgets.textField(
-                  isPassword: false,
-                  hintText: 'Your email adress',
-                  iconLeading: 'assets/images/email-icon.png',
-                  title: 'Email',
-                ),
-                CustomWidgets.textField(
-                  isPassword: true,
-                  hintText: 'Your password',
-                  iconLeading: 'assets/images/password.png',
-                  title: 'Password',
-                ),
-                CustomWidgets.button(
-                    borderRadius: 12,
-                    width: double.infinity,
-                    buttonColor: primaryColor,
-                    title: 'Sign In',
-                    textColor: Colors.white,
-                    onTap: () {
-                      print('print');
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => MainPage(),
-                          ));
-                    }),
-                Spacer(),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Don\'t have an account?',
-                      style: primaryTextStyle.copyWith(
-                        color: blackText,
-                        fontSize: 12,
-                      ),
-                    ),
-                    TextButton(
-                      child: Text(
-                        'Sign Up',
+    return SafeArea(
+      child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        backgroundColor: bgColor,
+        body: CustomScrollView(
+          slivers: [
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  header(),
+                  CustomWidgets.textField(
+                    isPassword: false,
+                    hintText: 'Your email adress',
+                    iconLeading: 'assets/images/email-icon.png',
+                    title: 'Email',
+                  ),
+                  CustomWidgets.textField(
+                    isPassword: true,
+                    hintText: 'Your password',
+                    iconLeading: 'assets/images/password.png',
+                    title: 'Password',
+                  ),
+                  CustomWidgets.button(
+                      borderRadius: 12,
+                      width: double.infinity,
+                      buttonColor: primaryColor,
+                      title: 'Sign In',
+                      textColor: Colors.white,
+                      onTap: () {
+                        print('print');
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MainPage(),
+                            ));
+                      }),
+                  Spacer(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Don\'t have an account?',
                         style: primaryTextStyle.copyWith(
+                          color: blackText,
                           fontSize: 12,
-                          color: primaryColor,
                         ),
                       ),
-                      onPressed: () {
-                        Get.to(
-                          () => SignUpPage(),
-                        );
-                      },
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          )
-        ],
+                      TextButton(
+                        child: Text(
+                          'Sign Up',
+                          style: primaryTextStyle.copyWith(
+                            fontSize: 12,
+                            color: primaryColor,
+                          ),
+                        ),
+                        onPressed: () {
+                          Get.to(
+                            () => SignUpPage(),
+                          );
+                        },
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

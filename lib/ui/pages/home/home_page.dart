@@ -222,7 +222,7 @@ class HomePages extends StatelessWidget {
                       Text(
                         'Hiking',
                         style: primaryTextStyle.copyWith(
-                          color: grey,
+                          color: secondaryTextColor,
                           fontSize: 12,
                         ),
                       ),
@@ -232,7 +232,7 @@ class HomePages extends StatelessWidget {
                       Text(
                         'TERREX URBAN LOW',
                         style: primaryTextStyle.copyWith(
-                          color: blackTextColor,
+                          color: secondaryTextColor,
                           fontWeight: semiBold,
                           fontSize: 18,
                         ),

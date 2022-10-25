@@ -15,8 +15,7 @@ Color primaryTextColor = const Color(0xffF1F0F2);
 Color secondaryTextColor = const Color(0xff999999);
 Color blackText = const Color(0xff504F5E);
 Color transparentColor = Colors.transparent;
-Color grey = const Color(0xff999999);
-Color blackTextColor = const Color(0xff999999);
+
 
 double defaultMargin = 30.0;
 
