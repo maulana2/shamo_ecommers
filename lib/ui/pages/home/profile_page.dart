@@ -20,7 +20,7 @@ class ProfilePages extends StatelessWidget {
               Container(
                 height: 64,
                 width: 64,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.amber,
                   shape: BoxShape.circle,
                 ),
@@ -29,10 +29,10 @@ class ProfilePages extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 16,
               ),
-
+ 
               Expanded(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -73,7 +73,7 @@ class ProfilePages extends StatelessWidget {
 
     Widget _titleAccount() {
       return Padding(
-        padding: EdgeInsets.only(top: 20),
+        padding: const EdgeInsets.only(top: 20),
         child: Text(
           'Account',
           style: primaryTextStyle.copyWith(
@@ -86,7 +86,7 @@ class ProfilePages extends StatelessWidget {
 
     Widget _titleGeneral() {
       return Padding(
-        padding: EdgeInsets.only(top: 20),
+        padding: const EdgeInsets.only(top: 20),
         child: Text(
           'General',
           style: primaryTextStyle.copyWith(
@@ -106,7 +106,7 @@ class ProfilePages extends StatelessWidget {
               width: double.infinity,
               decoration: BoxDecoration(
                 color: bgColor3,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(30),
                   topRight: Radius.circular(30),
                 ),

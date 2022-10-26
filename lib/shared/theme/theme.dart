@@ -15,7 +15,7 @@ Color primaryTextColor = const Color(0xffF1F0F2);
 Color secondaryTextColor = const Color(0xff999999);
 Color blackText = const Color(0xff504F5E);
 Color transparentColor = Colors.transparent;
-
+Color dividerColor = Color(0xff2B2939);
 
 double defaultMargin = 30.0;
 
@@ -29,3 +29,5 @@ TextStyle secondaryTextStyle = GoogleFonts.poppins(
 FontWeight semiBold = FontWeight.w600;
 FontWeight medium = FontWeight.w500;
 FontWeight normal = FontWeight.w400;
+FontWeight light = FontWeight.w300;
+
