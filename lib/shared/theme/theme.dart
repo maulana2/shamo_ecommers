@@ -16,6 +16,7 @@ Color secondaryTextColor = const Color(0xff999999);
 Color blackText = const Color(0xff504F5E);
 Color transparentColor = Colors.transparent;
 Color dividerColor = Color(0xff2B2939);
+Color greyText = Color(0xffB4B4B4);
 
 double defaultMargin = 30.0;
 
@@ -30,4 +31,3 @@ FontWeight semiBold = FontWeight.w600;
 FontWeight medium = FontWeight.w500;
 FontWeight normal = FontWeight.w400;
 FontWeight light = FontWeight.w300;
-

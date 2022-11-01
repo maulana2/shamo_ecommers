@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:shamo_app/shared/theme/theme.dart';
 import 'package:shamo_app/ui/pages/home/chat_page.dart';
 import 'package:shamo_app/ui/pages/home/home_page.dart';

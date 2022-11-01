@@ -115,8 +115,8 @@ class ProfilePages extends StatelessWidget {
                 padding: EdgeInsets.symmetric(
                   horizontal: defaultMargin,
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                child: ListView(
+                  
                   children: [
                     _titleAccount(),
                     CustomWidgets.tileProfile(

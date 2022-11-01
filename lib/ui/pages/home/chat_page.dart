@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:shamo_app/routes/app_pages.dart';
 import 'package:shamo_app/shared/theme/theme.dart';
+import 'package:shamo_app/ui/pages/detail_chat_page.dart';
 import 'package:shamo_app/ui/pages/widgets/custom_widget.dart';
 
 class ChatPages extends StatelessWidget {
@@ -80,60 +83,63 @@ class ChatPages extends StatelessWidget {
         child: ListView.separated(
             shrinkWrap: true,
             physics: ScrollPhysics(),
-            itemBuilder: (context, index) => Padding(
-                  padding: EdgeInsets.only(top: defaultMargin),
-                  child: Container(
-                    width: double.infinity,
-                    height: 60,
-                    margin: EdgeInsets.only(
-                      left: defaultMargin,
-                      right: defaultMargin,
-                    ),
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          'assets/images/logo-shop.png',
-                          height: 54,
-                          width: 54,
-                        ),
-                        SizedBox(
-                          width: 12,
-                        ),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Shoes Store',
-                                style: primaryTextStyle.copyWith(
-                                    fontSize: 15,
-                                    overflow: TextOverflow.ellipsis),
-                              ),
-                              Text(
-                                'Good Night, this is message from store, thank you for following this store',
-                                style: primaryTextStyle.copyWith(
-                                  fontSize: 14,
-                                  fontWeight: light,
-                                  color: secondaryTextColor,
-                                  overflow: TextOverflow.ellipsis,
+            itemBuilder: (context, index) => MaterialButton(
+                  onPressed: () => Get.to(DetailChatPage()),
+                  child: Padding(
+                    padding: EdgeInsets.only(top: defaultMargin),
+                    child: Container(
+                      width: double.infinity,
+                      height: 60,
+                      margin: EdgeInsets.only(
+                        left: defaultMargin,
+                        right: defaultMargin,
+                      ),
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            'assets/images/logo-shop.png',
+                            height: 54,
+                            width: 54,
+                          ),
+                          SizedBox(
+                            width: 12,
+                          ),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'Shoes Store',
+                                  style: primaryTextStyle.copyWith(
+                                      fontSize: 15,
+                                      overflow: TextOverflow.ellipsis),
                                 ),
-                              ),
-                            ],
+                                Text(
+                                  'Good Night, this is message from store, thank you for following this store',
+                                  style: primaryTextStyle.copyWith(
+                                    fontSize: 14,
+                                    fontWeight: light,
+                                    color: secondaryTextColor,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                        Container(
-                          height: 15,
-                          width: 30,
-                          child: Text(
-                            "now",
-                            style: primaryTextStyle.copyWith(
-                                fontSize: 10,
-                                color: secondaryTextColor,
-                                overflow: TextOverflow.ellipsis),
+                          Container(
+                            height: 15,
+                            width: 30,
+                            child: Text(
+                              "now",
+                              style: primaryTextStyle.copyWith(
+                                  fontSize: 10,
+                                  color: secondaryTextColor,
+                                  overflow: TextOverflow.ellipsis),
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),

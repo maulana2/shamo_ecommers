@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:shamo_app/ui/pages/detail_chat_page.dart';
 import 'package:shamo_app/ui/pages/home/chat_page.dart';
 import 'package:shamo_app/ui/pages/home/main_page.dart';
 import 'package:shamo_app/ui/pages/home/home_page.dart';
@@ -42,5 +43,9 @@ abstract class AppPages {
       name: Routes.PROFILE,
       page: () => ProfilePages(),
     ),
+    GetPage(
+      name: Routes.DETAILCHATPAGE,
+      page: () => DetailChatPage(),
+    )
   ];
 }
