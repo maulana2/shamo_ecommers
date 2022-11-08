@@ -56,12 +56,33 @@ class DetailChatPage extends StatelessWidget {
         child: Row(
           children: [
             Expanded(
-              child: TextField(
-                decoration: InputDecoration.collapsed(
-                  hintText: 'Pesan...',
+              child: Container(
+                height: 45,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 12,
                 ),
-                autocorrect: false,
+                decoration: BoxDecoration(
+                  color: bgColor4,
+                ),
+                child: TextField(
+                  style: primaryTextStyle.copyWith(),
+                  decoration: InputDecoration.collapsed(
+
+                    hintText: 'Type message...',
+                    hintStyle: primaryTextStyle.copyWith(
+                      color: subtitleColor,
+                    ),
+                  ),
+                  autocorrect: false,
+                ),
               ),
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            Image.asset(
+              'assets/images/send_button.png',
             ),
           ],
         ),

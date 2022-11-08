@@ -17,6 +17,8 @@ Color blackText = const Color(0xff504F5E);
 Color transparentColor = Colors.transparent;
 Color dividerColor = Color(0xff2B2939);
 Color greyText = Color(0xffB4B4B4);
+Color subtitleColor = Color(0xff676A77);
+
 
 double defaultMargin = 30.0;
 

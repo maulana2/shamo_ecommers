@@ -84,7 +84,9 @@ class ChatPages extends StatelessWidget {
             shrinkWrap: true,
             physics: ScrollPhysics(),
             itemBuilder: (context, index) => MaterialButton(
-                  onPressed: () => Get.to(DetailChatPage()),
+                  onPressed: () => Get.to(
+                    DetailChatPage(),
+                  ),
                   child: Padding(
                     padding: EdgeInsets.only(top: defaultMargin),
                     child: Container(
